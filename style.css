@@ -57,6 +57,7 @@ main {
     background-position: center;
     width: 200px;
     height: 200px;
+    border: 5px solid white;
     border-radius: 50%;
     animation: rotate 15s linear infinite;
     position: relative;
