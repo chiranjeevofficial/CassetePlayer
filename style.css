@@ -1,0 +1,74 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+main {
+    background: linear-gradient(45deg, red, yellow);
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    background-color: #ffffff21;
+    width: 400px;
+    margin: 0 auto;
+    position: relative;
+    top: 15%;
+    padding: 50px 0;
+    border-radius: 5%;
+}
+
+.player {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.song-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.song-details * {
+    padding: 5px 0;
+}
+
+.cover {
+    width: 220px;
+    height: 220px;
+    background-image: url(fotor-ai-2023073111443.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 5%;
+    position: absolute;
+    left: 10%;
+    z-index: 1;
+}
+
+.cassete {
+    background-image: url(fotor-ai-2023073111443.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    animation: rotate 15s linear infinite;
+    position: relative;
+    left: 15%;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
