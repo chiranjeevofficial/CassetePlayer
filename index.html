@@ -1,34 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cassete Player</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cassete Player</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main>
-        <div class="container">
-            <div class="player">
-                <div class="cover"></div>
-                <div class="cassete"></div>
-            </div>
-            <div class="song-details">
-                <h2>Rabb Maneya</h2>
-                <p>Song By - Lakhwinder Wadali and Neeti Mohan</p>
-                <p>Presented By - Chiranjeev Kashyap</p>
-            </div>
-        </div>
-    </main>
-    <audio id="myAudio" autoplay loop preload="auto">
-        <source src="rabb_maneya_edit.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-    <script>
-        window.addEventListener('load', function() {
+  <main>
+    <div class="container">
+      <div class="player">
+        <div class="cover"></div>
+        <div class="cassete"></div>
+      </div>
+      <div class="song-details">
+        <h2>Rabb Maneya</h2>
+        <p>Song By - Lakhwinder Wadali and Neeti Mohan</p>
+        <p>Presented By - Chiranjeev Kashyap</p>
+        <p id="playClick">Click to play</p>
+      </div>
+    </div>
+  </main>
+  <audio id="myAudio" autoplay loop preload="auto">
+    <source src="rabb_maneya_edit.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const myAudio = document.getElementById('myAudio');
+      // Check if media playback is supported
+      if (myAudio.canPlayType) {
+        // Check if browser has permission to play media
+        if (myAudio.paused) {
+          // Display a message asking the user to allow media playback
+          const permissionMessage = document.getElementById('playClick');
+          permissionMessage.style.color = 'white';
+          permissionMessage.style.padding = '10px';
+          permissionMessage.style.cursor = 'pointer';
+          permissionMessage.addEventListener('click', () => {
+            // Try to play media on user interaction (e.g., when they click the message)
+            myAudio.play().catch((error) => {
+              console.error('Media playback error:', error);
+            });
+          });
+        }
+      } else {
+        console.error('Media playback is not supported in this browser.');
+      }
+    });    </script>
+  <!-- <script>
+        window.addEventListener('click', function() {
             var audio = document.getElementById('myAudio');
             audio.play();
         });
-    </script>
+    </script> -->
 </body>
+
 </html>
