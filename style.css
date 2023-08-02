@@ -7,15 +7,18 @@
 
 main {
     background: linear-gradient(45deg, red, yellow);
-    width: 100vw;
-    height: 100vh;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
     background-color: #ffffff21;
     width: 400px;
     margin: 0 auto;
-    position: relative;
+    /* position: relative; */
     top: 15%;
     padding: 50px 0;
     border-radius: 5%;
@@ -77,4 +80,8 @@ main {
     100% {
         transform: rotate(360deg);
     }
+}
+
+@media screen and (max) {
+    
 }
