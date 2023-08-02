@@ -67,11 +67,6 @@ main {
     left: 15%;
 }
 
-#playClick {
-    font-size: 1.6rem;
-    font-weight: bold;
-}
-
 @keyframes rotate {
     0% {
         transform: rotate(0deg);
