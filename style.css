@@ -6,7 +6,7 @@
 }
 
 main {
-    background: linear-gradient(45deg, red, yellow);
+    background: linear-gradient(45deg, rgb(190, 43, 43), yellow);
     min-width: 100vw;
     min-height: 100vh;
     display: flex;
